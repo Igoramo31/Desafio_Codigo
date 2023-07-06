@@ -3,7 +3,15 @@
 #include <string.h>
 
 void PrimeiraMaiuscula(char str[]) {
+  int tamanho = strlen(str);
 
+  for (int i = 1; i < tamanho; i++) {
+    if (str[i] == ' ') {
+      if (str[i + 1] != ' ' && str[i - 1] == '.') {
+        str[i + 1] = toupper(str[i + 1]);
+      }
+    }
+  }
 }
 
 int main() {
