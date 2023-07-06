@@ -2,7 +2,18 @@
 #include <string.h>
 
 void inverterOrdem(char str[]) {
+  int tamanho = strlen(str);
+  int inicio = 0;
+  int fim = tamanho - 1;
 
+  while (inicio < fim) { 
+    char temp = str[inicio];
+    str[inicio] = str[fim];
+    str[fim] = temp;
+    inicio++;
+    fim--;
+  }
+    printf("%s\n", str);
 }
 
 int main() {
