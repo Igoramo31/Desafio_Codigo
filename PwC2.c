@@ -7,7 +7,7 @@ void RemovaDuplicado(char str[]) {
 
   for (i = 0; i < tamanho - 1; i++) {
       for (j = i + 1; j < tamanho; j++) {
-        if (str[i] == str[j]) {
+        if (str[j] != ' ' && str[i] == str[j]) {
           for (k = j; k < tamanho - 1; k++) {
             str[k] = str[k + 1];
           }
@@ -17,6 +17,7 @@ void RemovaDuplicado(char str[]) {
       }
   }
 
+  str[tamanho] = '\0';
 }
 
 int main() {
