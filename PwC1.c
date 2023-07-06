@@ -59,6 +59,7 @@ int main() {
   tamanho - Obtém o tamanho da string em int.
   inicio - Índice de início para a inversão das palavras em int.
   fim - Índice de fim para a inversão dos caracteres em int.
+  temp - String criada com o objetivo de auxiliar na lógica do código, "String temporária"
 
     FUNÇÕES:
     
