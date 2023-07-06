@@ -5,6 +5,7 @@ void encontrarPalin(char str[]) {
   int tamanho = strlen(str);
   int fim = 1, inicio = 0;
   int low, high;
+  int comprimento;
 
   for (int i = 0; i < tamanho; i++) {
     low = i - 1;
@@ -15,6 +16,12 @@ void encontrarPalin(char str[]) {
       high++;
     }
 
+    comprimento = high - low - 1;
+
+    if (comprimento > fim) {
+      fim = comprimento;
+      inicio = low + 1;
+    }
   }
 
   strncpy(str, str + inicio, fim);
