@@ -18,17 +18,16 @@ void inverterOrdem(char str[]) {
   fim = 0;
 
   while (fim <= tamanho) {
-    if (str[fim] == ' ') {
-      for (int j = inicio; j < (inicio + fim); j++) {
+    if (str[fim] == ' ' || str[fim] == '\0') {
+      for (int j = inicio; j < (inicio + fim) / 2; j++) {
         char temp = str[j];
         str[j] = str[inicio + fim - j - 1];
-        str[inicio + fim - j] = temp;
+        str[inicio + fim - j - 1] = temp;
       }
       inicio = fim + 1;
     }
     fim++;
   }
-    printf("%s\n", str);
 }
 
 
@@ -40,6 +39,8 @@ int main() {
   str[strcspn(str, "\n")] = '\0';
 
   inverterOrdem(str);
+
+  printf("%s\n", str);
 
   return 0;
 }
