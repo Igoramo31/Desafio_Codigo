@@ -2,8 +2,11 @@
 #include <string.h>
 
 void encontrarPalin(char str[]) {
-
+  int tamanho = strlen(str);
+  int fim = 1, inicio = 0;
+  int low, high;
 }
+
 
 int main() {
   char str[100];
