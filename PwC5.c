@@ -2,6 +2,17 @@
 #include <string.h>
 
 int VerificaPalin(char str[]) {
+  int tamanho = strlen(str);
+  int inicio = 0;
+  int fim = tamanho - 1;
+
+  while (inicio < fim) {
+    if (str[inicio] != str[fim]) {
+      return 0;
+    }
+    inicio++;
+    fim--;
+  }
   return 1; 
 }
 
