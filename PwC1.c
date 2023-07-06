@@ -13,8 +13,24 @@ void inverterOrdem(char str[]) {
     inicio++;
     fim--;
   }
+
+  inicio = 0;
+  fim = 0;
+
+  while (fim <= tamanho) {
+    if (str[fim] == ' ') {
+      for (int j = inicio; j < (inicio + fim); j++) {
+        char temp = str[j];
+        str[j] = str[inicio + fim - j - 1];
+        str[inicio + fim - j] = temp;
+      }
+      inicio = fim + 1;
+    }
+    fim++;
+  }
     printf("%s\n", str);
 }
+
 
 int main() {
   char str[100];
