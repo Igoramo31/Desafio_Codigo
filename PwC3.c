@@ -5,6 +5,20 @@ void encontrarPalin(char str[]) {
   int tamanho = strlen(str);
   int fim = 1, inicio = 0;
   int low, high;
+
+  for (int i = 0; i < tamanho; i++) {
+    low = i - 1;
+    high = i + 1;
+
+    while (low >= 0 && high < tamanho && str[low] == str[high]) {
+      low--;
+      high++;
+    }
+
+  }
+
+  strncpy(str, str + inicio, fim);
+  str[fim] = '\0';
 }
 
 
