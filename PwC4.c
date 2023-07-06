@@ -5,9 +5,11 @@
 void PrimeiraMaiuscula(char str[]) {
   int tamanho = strlen(str);
 
+      str[0] = toupper(str[0]); 
+
   for (int i = 1; i < tamanho; i++) {
     if (str[i] == ' ') {
-      if (str[i + 1] != ' ' && str[i - 1] == '.') {
+      if (str[i + 1] != ' ' && (str[i - 1] == '.' || str[i - 1] == '!' || str[i - 1] == '?')) {
         str[i + 1] = toupper(str[i + 1]);
       }
     }
